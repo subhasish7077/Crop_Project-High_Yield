@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>High Yield</title>
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet"/>
+	
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg bg-secondary bg-gradient" style="height: 50px;">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">High Yield</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="navbar-nav text-dark" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto">	
+			  <li class="nav-item">
+				<a class="nav-link" aria-current="page" href="{{ url_for('home')}}">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="{{ url_for('crop') }}">Crop</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="{{ url_for('fertilizer') }}">Fertilizer</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="{{ url_for('disease') }}">Diseases</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+	{% block body %} 
+	{% endblock %}
+	<!-- <section style="height: 1000px;">
+		<div class="container-fluid h-100">
+			
+		</div>
+	</section> -->
+	<!-- footer -->
+	<footer class="container-fluid bg-secondary  bg-gradient">
+		<div class="row">
+			<div class="col-4 text-center">
+				<form class="ms-lg-auto p-4 w-75">
+					<!-- Name input -->
+					<div class="form-outline m-1 bg-light rounded-1">
+					  <input type="text" id="form4Example1" class="form-control" />
+					  <label class="form-label" for="form4Example1">Name</label>
+					</div>
+					<!-- Email input -->
+					<div class="form-outline m-1 bg-light rounded-1">
+					  <input type="email" id="form4Example2" class="form-control" />
+					  <label class="form-label" for="form4Example2">Email</label>
+					</div>
+				  
+					<!-- Message input -->
+					<div class="form-outline m-1 bg-light rounded-1">
+					  <textarea class="form-control" id="form4Example3" rows="2"></textarea>
+					  <label class="form-label" for="form4Example3">Message</label>
+					</div>
+					<!-- Submit button -->
+					<button type="submit" class="btn btn-primary btn-block m-1">Send</button>
+				</form>
+			</div>
+			<div class="col-4">
+				<div class="container mt-lg-5">
+					<h2 class="text-center ">
+						<a href="#" class="text-dark text-decoration-none font-a">
+							High Yield
+						</a>
+					</h2>
+					<div class="w3l-copy text-center">
+						<p class="text-da"><br>A Way To Help Farmers ❤️<br> </p>
+					</div>			
+				</div>
+			</div>
+			<div class="col-4">
+				<div>
+					<div class="col ms-5 mt-4">
+						<p>
+							<i class="fas fa-home me-2 p-0 text-dark"></i><span class="ms-1">Gunupur</span>
+						</p>
+						<p>
+							<i class="fas fa-envelope me-2 p-0 text-dark"></i><span class="ms-1">gnpr@gmail.com</span>
+						</p>
+						<p>
+							<i class="fas fa-phone me-2 p-0 text-dark"></i><span class="ms-1">+91 7090909090</span>
+						</p>
+						<p>
+							<i class="fas fa-blender-phone me-2 p-0 text-dark"></i><span class="ms-1">06255 250360</span>
+						</p>
+					</div>
+					<div class="col">
+						<div class="ms-5">
+							<ul class="list-unstyled list-inline">
+								<li class="list-inline-item">
+									<a href="#" class="btn-floating btn-sm text-dark" style="font-size: 25px;"><i class="fab fa-facebook"></i></a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#" class="btn-floating btn-sm text-dark" style="font-size: 25px;"><i class="fab fa-instagram"></i></a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#" class="btn-floating btn-sm text-dark" style="font-size: 25px;"><i class="fab fa-twitter"></i></a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#" class="btn-floating btn-sm text-dark" style="font-size: 25px;"><i class="fab fa-linkedin"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+	<!-- MDB -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

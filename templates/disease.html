@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block body %}
+<section class="m-5">
+    <div class="text-center text-capitalize h3 m-4">
+        disease prediction
+    </div>
+    <div class="container w-25">
+        <form class="form-signin" method=post action="{{url_for('disease_prediction') }}" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload Leaf Picture</label>
+                <input class="form-control" type="file" name="file" id="inputfile" onchange="preview_image(event)">
+            </div>
+            <button type="submit" id="output-image" class="btn btn-primary btn-block mb-3">Predict</button>
+        </form>
+    </div>
+</section>
+<script type="text/javascript">
+    function preview_image(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById('output-image')
+        output.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block body %}
+<section class="m-4 ">
+    <div class="text-center text-capitalize h3 m-4">
+        Crop Recommendation
+    </div>
+    <div class="container w-25">
+        <form action="{{url_for('crop_r') }}" method="post">
+            <div class="mb-3">
+                <select class="form-select form-select" aria-label=".form-select example" id="state" name="state">
+                    <option>State</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <select class="form-select form-select" aria-label=".form-select example" id="city" name="city">
+                    <option>City</option>
+                </select>
+            </div>
+            <div class="form-outline mb-3">
+              <input type="number" id="nitrogen" name="nitrogen" class="form-control"/>
+              <label class="form-label" for="nitrogen">Nitrogen</label>
+            </div>
+            <div class="form-outline mb-3">
+                <input type="number" id="phosphorus" name="phosphorus" class="form-control"/>
+                <label class="form-label" for="phosphorus">Phosphorus</label>
+            </div>
+            <div class="form-outline mb-3">
+                <input type="number" id="pottasium" name="pottasium" class="form-control"/>
+                <label class="form-label" for="pottasium">Pottasium</label>
+            </div>
+            <div class="form-outline mb-3">
+                <input type="text" id="ph" name="ph" class="form-control"/>
+                <label class="form-label" for="rainfall">Ph</label>
+            </div>
+            <div class="form-outline mb-3">
+                <input type="text" id="rainfall" name="rainfall" class="form-control"/>
+                <label class="form-label" for="rainfall">Rainfall(mm)</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mb-3">Recommend</button>
+        </form>
+    </div>
+</section>
+<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/state_city.js') }}"></script>
+{% endblock %}
